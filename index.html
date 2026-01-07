@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurores Boréales et Sérénité Arctique à Tromso </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token=" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée en douceur à Tromso</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Découverte culturelle et panorama arctique</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Rencontre avec les rennes et culture Sami</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Musée polaire et première chasse aux aurores</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Croisière d"observation des baleines</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Traîneau à chiens et paysages enneigés</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Journée détente et bien-être arctique</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Aquarium Polaria et promenade côtière</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Art arctique et culture locale</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Seconde chance pour les aurores boréales</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Randonnée douce en raquettes ou balade côtière</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Musée des Trolls et ferry local</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Derniers achats et moments calmes</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Départ de Tromso</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">TROMSO</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Aurores Boréales et Sérénité Arctique à Tromso</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 9 au 22 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 3000 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 4h30 (format: Xh depuis Paris, france)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée en douceur à Tromso</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un vol vers le Grand Nord, installez-vous confortablement dans votre hébergement. Profitez d"une première balade relaxante le long du port de Tromso, imprégnez-vous de l"atmosphère arctique et savourez un dîner chaleureux pour bien commencer votre aventure.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬 Arrivée à Tromso</strong>: Atterrissage à l"aéroport de Tromso (TOS) et transfert vers votre hôtel au cœur de la ville.</li><li><strong>🛏️ Installation à l"hôtel</strong>: Prenez le temps de vous installer et de vous rafraîchir après le voyage.</li><li><strong>🚶‍♂️ Balade relaxante au port</strong>: Une promenade douce le long du port pour admirer les bateaux et les lumières de la ville, un premier contact avec l"ambiance polaire.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le trajet de l"aéroport au centre-ville de Tromso est rapide (environ 15-20 min) et bien desservi par des bus ou taxis.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte culturelle et panorama arctique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l"histoire et la culture de Tromso avec la majestueuse Cathédrale Arctique, puis prenez de la hauteur pour admirer un panorama époustouflant sur la ville et ses environs enneigés, une expérience visuelle inoubliable.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛪ Visite de la Cathédrale Arctique</strong>: Admirez l"architecture unique de cette église emblématique, un chef-d"œuvre moderne inspiré par les paysages norvégiens.</li><li><strong>🚠 Montée au Fjellheisen</strong>: Prenez le téléphérique pour atteindre le sommet du mont Storsteinen et profitez d"une vue panoramique spectaculaire sur Tromso et les fjords environnants.</li><li><strong>☕ Pause Fika</strong>: Détendez-vous dans un café local avec une boisson chaude et une pâtisserie norvégienne, une tradition réconfortante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil Photo</p>
+                                <p class="text-gray-700">Le Fjellheisen offre des opportunités de photos incroyables, surtout au coucher du soleil ou par temps clair pour les aurores boréales.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rencontre avec les rennes et culture Sami</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Vivez une expérience authentique en rencontrant des rennes et en vous immergeant dans la culture Sami. Profitez d"une balade en traîneau tiré par des rennes, suivie d"un moment de partage autour d"un feu de camp, une journée riche en émotions et en découvertes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🦌 Traîneau à rennes et nourrissage</strong>: Participez à une balade paisible en traîneau à rennes et aidez à nourrir ces animaux emblématiques de l"Arctique.</li><li><strong>🔥 Expérience Sami et "lavvo"</strong>: Écoutez des histoires et des chants traditionnels (joik) dans un "lavvo" (tente Sami) autour d"un feu de camp, en dégustant une boisson chaude.</li><li><strong>🚶‍♀️ Balade douce dans la nature environnante</strong>: Profitez d"une courte promenade guidée pour apprécier la tranquillité des paysages enneigés.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧣 Équipement</p>
+                                <p class="text-gray-700">Des vêtements thermiques chauds sont essentiels pour cette activité en extérieur, même si des combinaisons sont souvent fournies.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Musée polaire et première chasse aux aurores</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez l"histoire fascinante des explorateurs polaires au Musée Polaire, puis préparez-vous pour une soirée magique. Partez à la chasse aux aurores boréales, une expérience inoubliable où le ciel s"illumine de couleurs dansantes, un spectacle naturel à couper le souffle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏛️ Visite du Musée Polaire</strong>: Explorez les expositions sur la chasse, la pêche et les expéditions polaires, un aperçu captivant de la vie arctique.</li><li><strong>🍽️ Dîner local</strong>: Savourez un repas typiquement norvégien dans un restaurant du centre-ville.</li><li><strong>✨ Chasse aux Aurores Boréales (en bus)</strong>: Rejoignez un tour guidé en bus qui vous emmènera loin des lumières de la ville pour maximiser vos chances d"observer les aurores boréales.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Pour photographier les aurores, un trépied et un appareil photo avec réglages manuels sont fortement recommandés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Croisière d"observation des baleines</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Embarquez pour une croisière paisible dans les fjords à la recherche des baleines. Observez ces majestueux mammifères marins dans leur habitat naturel, une expérience respectueuse de la faune et de la nature, offrant des souvenirs impérissables au cœur de l"Arctique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚢 Croisière d"observation des baleines</strong>: Montez à bord d"un bateau silencieux (hybride ou électrique) pour observer les orques et les baleines à bosse dans les fjords.</li><li><strong>🍲 Déjeuner à bord</strong>: Profitez d"un repas chaud servi pendant la croisière pour vous réchauffer.</li><li><strong>😌 Après-midi libre et détente</strong>: Reposez-vous après l"excursion en mer, peut-être avec un livre ou un moment de calme à l"hôtel.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧥 Vêtements</p>
+                                <p class="text-gray-700">Même à l"intérieur du bateau, il est conseillé de porter des couches chaudes, car les ponts extérieurs peuvent être très froids.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Traîneau à chiens et paysages enneigés</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Vivez la joie d"une balade en traîneau à chiens, confortablement installé en tant que passager. Laissez-vous glisser à travers les paysages hivernaux, tiré par une meute de huskies enthousiastes, une activité douce et immersive au cœur de la nature arctique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🐕 Traîneau à chiens (passager)</strong>: Profitez d"une excursion où vous êtes confortablement assis dans le traîneau, laissant les chiens faire le travail.</li><li><strong>🔥 Boissons chaudes et histoires</strong>: Réchauffez-vous avec un chocolat chaud ou un café autour d"un feu, en écoutant les récits des "mushers".</li><li><strong>🚶‍♂️ Petite balade autour du camp</strong>: Une courte promenade pour saluer les chiens et admirer les environs enneigés.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐾 Bien-être animal</p>
+                                <p class="text-gray-700">Choisissez des opérateurs qui privilégient le bien-être de leurs chiens et des pratiques durables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée détente et bien-être arctique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Offrez-vous une journée de pure relaxation dans un spa arctique. Profitez des saunas et des bains chauds pour vous ressourcer, puis terminez par une balade tranquille en ville, une parenthèse de bien-être au milieu de votre aventure polaire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🧖‍♀️ Détente au Vulkana Spa Boat</strong>: Profitez d"une expérience unique de spa flottant avec sauna, bain à remous et possibilité de baignade en mer (pour les plus courageux).</li><li><strong>🥗 Déjeuner léger et sain</strong>: Savourez un déjeuner équilibré après votre session de spa.</li><li><strong>🛍️ Flânerie dans les rues de Tromso</strong>: Explorez les petites boutiques et galeries d"art du centre-ville à votre rythme.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">Pensez à bien vous hydrater avant et après les séances de sauna pour profiter pleinement des bienfaits.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aquarium Polaria et promenade côtière</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez la vie marine de l"Arctique à Polaria, un aquarium unique avec des phoques barbus et des expositions interactives. Ensuite, profitez d"une promenade apaisante le long de la côte, respirant l"air frais et admirant les paysages marins, une journée entre découverte et sérénité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🐠 Visite de Polaria</strong>: Explorez l"aquarium le plus septentrional du monde, observez les phoques barbus et les poissons de l"Arctique, et découvrez des expositions sur le climat polaire.</li><li><strong>🚶‍♀️ Promenade le long de la côte</strong>: Une balade tranquille sur les sentiers côtiers près de Polaria, offrant de belles vues sur les fjords.</li><li><strong>📖 Moment lecture/café</strong>: Détendez-vous dans un café confortable avec une boisson chaude et un bon livre.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👨‍👩‍👧‍👦 Pour tous</p>
+                                <p class="text-gray-700">Polaria est une activité relaxante et éducative, idéale pour tous les âges et par tous les temps.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art arctique et culture locale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez l"art et l"histoire locale au Tromso University Museum, puis plongez dans l"ambiance du marché local. Terminez la journée par une visite de la bibliothèque publique, un havre de paix pour les amateurs de lecture, une journée dédiée à la culture et à la découverte.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🖼️ Visite du Tromso University Museum</strong>: Découvrez l"histoire naturelle et culturelle de la Norvège du Nord, y compris l"histoire Sami et les aurores boréales.</li><li><strong>🛍️ Exploration du marché local</strong>: Flânez parmi les étals (si ouvert) ou les boutiques d"artisanat pour trouver des souvenirs uniques.</li><li><strong>📚 Visite de la bibliothèque publique de Tromso</strong>: Admirez l"architecture moderne et profitez d"un moment de calme dans ce lieu culturel.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Le marché et les boutiques proposent des produits locaux comme des pulls en laine, des bijoux Sami ou des objets d"artisanat.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Seconde chance pour les aurores boréales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d"une matinée libre pour vous reposer ou revisiter un lieu coup de cœur. Le soir, repartez à l"aventure pour une seconde chasse aux aurores boréales, cette fois-ci peut-être avec un photographe professionnel, pour capturer la magie de ce phénomène céleste.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>😌 Matinée libre</strong>: Détendez-vous, faites du shopping ou revisitez un endroit que vous avez aimé.</li><li><strong>🍽️ Dîner décontracté</strong>: Un repas simple et savoureux dans un restaurant local.</li><li><strong>🌌 Chasse aux Aurores Boréales (petit groupe/photographe)</strong>: Optez pour un tour en petit groupe avec un guide photographe pour des conseils et des clichés mémorables des aurores.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤞 Chance</p>
+                                <p class="text-gray-700">Les aurores boréales sont un phénomène naturel. Une deuxième tentative augmente vos chances de les voir si la première n"a pas été concluante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Randonnée douce en raquettes ou balade côtière</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les paysages hivernaux lors d"une randonnée douce en raquettes sur un terrain plat, ou optez pour une balade apaisante le long de la côte. Profitez de la tranquillité de la nature et de l"air pur de l"Arctique, une activité relaxante pour se connecter avec l"environnement.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>❄️ Randonnée douce en raquettes</strong>: Participez à une excursion guidée en raquettes sur des sentiers faciles, accessible à tous, pour découvrir la beauté des forêts enneigées.</li><li><strong>☕ Chocolat chaud et "lefse"</strong>: Réchauffez-vous avec une boisson chaude et une pâtisserie norvégienne traditionnelle après l"effort.</li><li><strong>😌 Après-midi libre</strong>: Profitez de ce temps pour vous détendre ou explorer davantage la ville à votre guise.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Confort</p>
+                                <p class="text-gray-700">Des chaussures de randonnée imperméables et chaudes sont indispensables pour cette activité, même si les raquettes sont fournies.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Musée des Trolls et ferry local</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Visitez le fascinant Musée des Trolls pour une touche de folklore norvégien, puis embarquez sur un ferry local pour une mini-croisière relaxante. Admirez les paysages des fjords depuis l"eau, une perspective différente et apaisante de la beauté arctique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>👹 Visite du Musée des Trolls</strong>: Plongez dans le monde mythique des trolls norvégiens avec des expositions interactives et amusantes.</li><li><strong>⛴️ Mini-croisière en ferry local</strong>: Prenez un ferry public pour une courte traversée vers une île voisine (ex: Kvaløya) et profitez des vues sur les fjords.</li><li><strong>🍽️ Dîner d"adieu</strong>: Savourez un dernier dîner mémorable dans un restaurant de fruits de mer de Tromso.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Paysages</p>
+                                <p class="text-gray-700">Le ferry offre une excellente opportunité de prendre des photos des fjords et des montagnes environnantes depuis l"eau.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers achats et moments calmes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée pour faire vos derniers achats de souvenirs ou pour revisiter un lieu que vous avez particulièrement apprécié. Prenez le temps de savourer un dernier café norvégien et de vous imprégner une dernière fois de l"atmosphère unique de Tromso, avant de préparer votre départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛍️ Derniers achats de souvenirs</strong>: Trouvez les derniers cadeaux ou objets artisanaux à ramener chez vous.</li><li><strong>☕ Dernier "Fika"</strong>: Savourez un dernier café et une pâtisserie dans votre café préféré de Tromso.</li><li><strong>🚶‍♂️ Balade contemplative</strong>: Une dernière promenade pour admirer les paysages et les lumières de la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📦 Bagages</p>
+                                <p class="text-gray-700">Pensez à laisser de la place dans vos bagages pour les souvenirs, notamment les pulls en laine ou les produits locaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Tromso</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un petit-déjeuner tranquille, il est temps de dire au revoir à la magnifique ville de Tromso. Transfert vers l"aéroport pour votre vol retour, la tête remplie de souvenirs inoubliables des aurores boréales et des paysages arctiques.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🍳 Petit-déjeuner à l"hôtel</strong>: Profitez d"un dernier repas norvégien.</li><li><strong>🧳 Check-out et transfert</strong>: Départ de l"hôtel et transfert vers l"aéroport de Tromso (TOS).</li><li><strong>🛫 Vol retour vers Paris</strong>: Embarquement pour votre vol de retour, emportant avec vous la magie de l"Arctique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Tromso-q3srh6rl52n67zq/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Timing</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le transfert et les formalités à l"aéroport, surtout en période de forte affluence.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>A partir de 210 €/pers</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>Environ 180 €/pers (transferts aéroport, bus locaux, tours)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>Environ 840 €/pers (50-70€/jour, mix restaurants et repas légers)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>Environ 1100 €/pers (base 3* pour 13 nuits, sur 2 pers)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>Environ 650 €/pers (aurores, rennes, baleines, traîneau, musées)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Janvier à Mars</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Novembre à Février</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🍁 En janvier, les températures à Tromso varient entre -10°C et 0°C. Prévoir des vêtements très chauds, multicouches, imperméables et coupe-vent (bonnet, gants, écharpe, bottes fourrées).</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La monnaie est la Couronne Norvégienne (NOK). Les cartes de crédit sont largement acceptées partout. Prévoir un peu de liquide pour les petits marchés ou pourboires.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚗 Le permis français est suffisant. La conduite se fait à droite. Les routes peuvent être enneigées ou verglacées, des pneus hiver sont obligatoires. Les transports en commun sont efficaces à Tromso.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Le norvégien est la langue officielle, mais l"anglais est couramment parlé. Une carte SIM locale ou une eSIM est recommandée pour les données mobiles. Le Wi-Fi est disponible dans la plupart des hébergements et lieux publics.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Tromso-q3srh6rl52n67zq/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/CDG-TOS/2026-01-09/2026-01-22" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.visitnorway.fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Norway</strong></a></li>
+                    
+                        <li><a href="https://www.tromskortet.no/reiseplanlegger/category1000.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚌 Troms Fylkestrafikk</strong></a></li>
+                    
+                        <li><a href="https://www.yr.no/en/forecast/daily-table/1-305409/Norway/Troms%20og%20Finnmark/Troms%C3%B8/Troms%C3%B8" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Yr.no (Météo Norvégienne)</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
