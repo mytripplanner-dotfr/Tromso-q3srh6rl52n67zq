@@ -1,0 +1,445 @@
+{
+  "pays": "Norvège",
+  "drapeau": "🇳🇴",
+  "symbole": "❄️",
+  "titre": "Aurores Boréales et Sérénité Arctique à Tromso",
+  "budget_total": "Environ 3000 €/personne",
+  "duree": "14 jours",
+  "date_debut": "2026-01-09",
+  "date_fin": "2026-01-22",
+  "temps_vol": "4h30 (format: Xh depuis Paris, france)",
+  "escale": "1",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée en douceur à Tromso",
+      "legende": "Après un vol vers le Grand Nord, installez-vous confortablement dans votre hébergement. Profitez d\"une première balade relaxante le long du port de Tromso, imprégnez-vous de l\"atmosphère arctique et savourez un dîner chaleureux pour bien commencer votre aventure.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🛬 Arrivée à Tromso</strong>: Atterrissage à l\"aéroport de Tromso (TOS) et transfert vers votre hôtel au cœur de la ville.",
+        "<strong>🛏️ Installation à l\"hôtel</strong>: Prenez le temps de vous installer et de vous rafraîchir après le voyage.",
+        "<strong>🚶‍♂️ Balade relaxante au port</strong>: Une promenade douce le long du port pour admirer les bateaux et les lumières de la ville, un premier contact avec l\"ambiance polaire."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le trajet de l\"aéroport au centre-ville de Tromso est rapide (environ 15-20 min) et bien desservi par des bus ou taxis."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "⛪",
+      "titre": "Découverte culturelle et panorama arctique",
+      "legende": "Plongez dans l\"histoire et la culture de Tromso avec la majestueuse Cathédrale Arctique, puis prenez de la hauteur pour admirer un panorama époustouflant sur la ville et ses environs enneigés, une expérience visuelle inoubliable.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>⛪ Visite de la Cathédrale Arctique</strong>: Admirez l\"architecture unique de cette église emblématique, un chef-d\"œuvre moderne inspiré par les paysages norvégiens.",
+        "<strong>🚠 Montée au Fjellheisen</strong>: Prenez le téléphérique pour atteindre le sommet du mont Storsteinen et profitez d\"une vue panoramique spectaculaire sur Tromso et les fjords environnants.",
+        "<strong>☕ Pause Fika</strong>: Détendez-vous dans un café local avec une boisson chaude et une pâtisserie norvégienne, une tradition réconfortante."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Cathédrale Arctique, Tromso",
+          "categorie": "Lieu de culte",
+          "coords": { "lat": 69.6489, "lng": 18.9415 }
+        },
+        {
+          "nom_recherche": "Fjellheisen, Tromso",
+          "categorie": "Téléphérique",
+          "coords": { "lat": 69.6468, "lng": 18.9715 }
+        }
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil Photo",
+          "texte": "Le Fjellheisen offre des opportunités de photos incroyables, surtout au coucher du soleil ou par temps clair pour les aurores boréales."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🦌",
+      "titre": "Rencontre avec les rennes et culture Sami",
+      "legende": "Vivez une expérience authentique en rencontrant des rennes et en vous immergeant dans la culture Sami. Profitez d\"une balade en traîneau tiré par des rennes, suivie d\"un moment de partage autour d\"un feu de camp, une journée riche en émotions et en découvertes.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🦌 Traîneau à rennes et nourrissage</strong>: Participez à une balade paisible en traîneau à rennes et aidez à nourrir ces animaux emblématiques de l\"Arctique.",
+        "<strong>🔥 Expérience Sami et \"lavvo\"</strong>: Écoutez des histoires et des chants traditionnels (joik) dans un \"lavvo\" (tente Sami) autour d\"un feu de camp, en dégustant une boisson chaude.",
+        "<strong>🚶‍♀️ Balade douce dans la nature environnante</strong>: Profitez d\"une courte promenade guidée pour apprécier la tranquillité des paysages enneigés."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Tromso Arctic Reindeer, Tromso",
+          "categorie": "Activité",
+          "coords": { "lat": 69.6700, "lng": 19.0000 }
+        }
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🧣",
+          "titre": "Équipement",
+          "texte": "Des vêtements thermiques chauds sont essentiels pour cette activité en extérieur, même si des combinaisons sont souvent fournies."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🌌",
+      "titre": "Musée polaire et première chasse aux aurores",
+      "legende": "Découvrez l\"histoire fascinante des explorateurs polaires au Musée Polaire, puis préparez-vous pour une soirée magique. Partez à la chasse aux aurores boréales, une expérience inoubliable où le ciel s\"illumine de couleurs dansantes, un spectacle naturel à couper le souffle.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🏛️ Visite du Musée Polaire</strong>: Explorez les expositions sur la chasse, la pêche et les expéditions polaires, un aperçu captivant de la vie arctique.",
+        "<strong>🍽️ Dîner local</strong>: Savourez un repas typiquement norvégien dans un restaurant du centre-ville.",
+        "<strong>✨ Chasse aux Aurores Boréales (en bus)</strong>: Rejoignez un tour guidé en bus qui vous emmènera loin des lumières de la ville pour maximiser vos chances d\"observer les aurores boréales."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Musée Polaire, Tromso",
+          "categorie": "Musée",
+          "coords": { "lat": 69.6493, "lng": 18.9587 }
+        }
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Pour photographier les aurores, un trépied et un appareil photo avec réglages manuels sont fortement recommandés."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🐳",
+      "titre": "Croisière d\"observation des baleines",
+      "legende": "Embarquez pour une croisière paisible dans les fjords à la recherche des baleines. Observez ces majestueux mammifères marins dans leur habitat naturel, une expérience respectueuse de la faune et de la nature, offrant des souvenirs impérissables au cœur de l\"Arctique.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🚢 Croisière d\"observation des baleines</strong>: Montez à bord d\"un bateau silencieux (hybride ou électrique) pour observer les orques et les baleines à bosse dans les fjords.",
+        "<strong>🍲 Déjeuner à bord</strong>: Profitez d\"un repas chaud servi pendant la croisière pour vous réchauffer.",
+        "<strong>😌 Après-midi libre et détente</strong>: Reposez-vous après l\"excursion en mer, peut-être avec un livre ou un moment de calme à l\"hôtel."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Havnekanten, Tromso",
+          "categorie": "Port",
+          "coords": { "lat": 69.6500, "lng": 18.9560 }
+        }
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🧥",
+          "titre": "Vêtements",
+          "texte": "Même à l\"intérieur du bateau, il est conseillé de porter des couches chaudes, car les ponts extérieurs peuvent être très froids."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🐕",
+      "titre": "Traîneau à chiens et paysages enneigés",
+      "legende": "Vivez la joie d\"une balade en traîneau à chiens, confortablement installé en tant que passager. Laissez-vous glisser à travers les paysages hivernaux, tiré par une meute de huskies enthousiastes, une activité douce et immersive au cœur de la nature arctique.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🐕 Traîneau à chiens (passager)</strong>: Profitez d\"une excursion où vous êtes confortablement assis dans le traîneau, laissant les chiens faire le travail.",
+        "<strong>🔥 Boissons chaudes et histoires</strong>: Réchauffez-vous avec un chocolat chaud ou un café autour d\"un feu, en écoutant les récits des \"mushers\".",
+        "<strong>🚶‍♂️ Petite balade autour du camp</strong>: Une courte promenade pour saluer les chiens et admirer les environs enneigés."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Villmarkssenter, Tromso",
+          "categorie": "Activité",
+          "coords": { "lat": 69.6000, "lng": 18.7000 }
+        }
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🐾",
+          "titre": "Bien-être animal",
+          "texte": "Choisissez des opérateurs qui privilégient le bien-être de leurs chiens et des pratiques durables."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🧖‍♀️",
+      "titre": "Journée détente et bien-être arctique",
+      "legende": "Offrez-vous une journée de pure relaxation dans un spa arctique. Profitez des saunas et des bains chauds pour vous ressourcer, puis terminez par une balade tranquille en ville, une parenthèse de bien-être au milieu de votre aventure polaire.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🧖‍♀️ Détente au Vulkana Spa Boat</strong>: Profitez d\"une expérience unique de spa flottant avec sauna, bain à remous et possibilité de baignade en mer (pour les plus courageux).",
+        "<strong>🥗 Déjeuner léger et sain</strong>: Savourez un déjeuner équilibré après votre session de spa.",
+        "<strong>🛍️ Flânerie dans les rues de Tromso</strong>: Explorez les petites boutiques et galeries d\"art du centre-ville à votre rythme."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Vulkana Spa Boat, Tromso",
+          "categorie": "Spa",
+          "coords": { "lat": 69.6500, "lng": 18.9500 }
+        }
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Pensez à bien vous hydrater avant et après les séances de sauna pour profiter pleinement des bienfaits."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🐠",
+      "titre": "Aquarium Polaria et promenade côtière",
+      "legende": "Découvrez la vie marine de l\"Arctique à Polaria, un aquarium unique avec des phoques barbus et des expositions interactives. Ensuite, profitez d\"une promenade apaisante le long de la côte, respirant l\"air frais et admirant les paysages marins, une journée entre découverte et sérénité.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🐠 Visite de Polaria</strong>: Explorez l\"aquarium le plus septentrional du monde, observez les phoques barbus et les poissons de l\"Arctique, et découvrez des expositions sur le climat polaire.",
+        "<strong>🚶‍♀️ Promenade le long de la côte</strong>: Une balade tranquille sur les sentiers côtiers près de Polaria, offrant de belles vues sur les fjords.",
+        "<strong>📖 Moment lecture/café</strong>: Détendez-vous dans un café confortable avec une boisson chaude et un bon livre."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Polaria, Tromso",
+          "categorie": "Aquarium",
+          "coords": { "lat": 69.6439, "lng": 18.9442 }
+        }
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "👨‍👩‍👧‍👦",
+          "titre": "Pour tous",
+          "texte": "Polaria est une activité relaxante et éducative, idéale pour tous les âges et par tous les temps."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🖼️",
+      "titre": "Art arctique et culture locale",
+      "legende": "Explorez l\"art et l\"histoire locale au Tromso University Museum, puis plongez dans l\"ambiance du marché local. Terminez la journée par une visite de la bibliothèque publique, un havre de paix pour les amateurs de lecture, une journée dédiée à la culture et à la découverte.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🖼️ Visite du Tromso University Museum</strong>: Découvrez l\"histoire naturelle et culturelle de la Norvège du Nord, y compris l\"histoire Sami et les aurores boréales.",
+        "<strong>🛍️ Exploration du marché local</strong>: Flânez parmi les étals (si ouvert) ou les boutiques d\"artisanat pour trouver des souvenirs uniques.",
+        "<strong>📚 Visite de la bibliothèque publique de Tromso</strong>: Admirez l\"architecture moderne et profitez d\"un moment de calme dans ce lieu culturel."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Tromso University Museum, Tromso",
+          "categorie": "Musée",
+          "coords": { "lat": 69.6600, "lng": 18.9100 }
+        },
+        {
+          "nom_recherche": "Tromso Public Library, Tromso",
+          "categorie": "Bibliothèque",
+          "coords": { "lat": 69.6492, "lng": 18.9530 }
+        }
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Le marché et les boutiques proposent des produits locaux comme des pulls en laine, des bijoux Sami ou des objets d\"artisanat."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "✨",
+      "titre": "Seconde chance pour les aurores boréales",
+      "legende": "Profitez d\"une matinée libre pour vous reposer ou revisiter un lieu coup de cœur. Le soir, repartez à l\"aventure pour une seconde chasse aux aurores boréales, cette fois-ci peut-être avec un photographe professionnel, pour capturer la magie de ce phénomène céleste.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>😌 Matinée libre</strong>: Détendez-vous, faites du shopping ou revisitez un endroit que vous avez aimé.",
+        "<strong>🍽️ Dîner décontracté</strong>: Un repas simple et savoureux dans un restaurant local.",
+        "<strong>🌌 Chasse aux Aurores Boréales (petit groupe/photographe)</strong>: Optez pour un tour en petit groupe avec un guide photographe pour des conseils et des clichés mémorables des aurores."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Tromso, Norvège",
+          "categorie": "Ville",
+          "coords": { "lat": 69.6492, "lng": 18.9553 }
+        }
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🤞",
+          "titre": "Chance",
+          "texte": "Les aurores boréales sont un phénomène naturel. Une deuxième tentative augmente vos chances de les voir si la première n\"a pas été concluante."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🚶‍♀️",
+      "titre": "Randonnée douce en raquettes ou balade côtière",
+      "legende": "Explorez les paysages hivernaux lors d\"une randonnée douce en raquettes sur un terrain plat, ou optez pour une balade apaisante le long de la côte. Profitez de la tranquillité de la nature et de l\"air pur de l\"Arctique, une activité relaxante pour se connecter avec l\"environnement.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>❄️ Randonnée douce en raquettes</strong>: Participez à une excursion guidée en raquettes sur des sentiers faciles, accessible à tous, pour découvrir la beauté des forêts enneigées.",
+        "<strong>☕ Chocolat chaud et \"lefse\"</strong>: Réchauffez-vous avec une boisson chaude et une pâtisserie norvégienne traditionnelle après l\"effort.",
+        "<strong>😌 Après-midi libre</strong>: Profitez de ce temps pour vous détendre ou explorer davantage la ville à votre guise."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Ersfjordbotn, Tromso",
+          "categorie": "Fjord",
+          "coords": { "lat": 69.6700, "lng": 18.3000 }
+        }
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Confort",
+          "texte": "Des chaussures de randonnée imperméables et chaudes sont indispensables pour cette activité, même si les raquettes sont fournies."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "⛴️",
+      "titre": "Musée des Trolls et ferry local",
+      "legende": "Visitez le fascinant Musée des Trolls pour une touche de folklore norvégien, puis embarquez sur un ferry local pour une mini-croisière relaxante. Admirez les paysages des fjords depuis l\"eau, une perspective différente et apaisante de la beauté arctique.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>👹 Visite du Musée des Trolls</strong>: Plongez dans le monde mythique des trolls norvégiens avec des expositions interactives et amusantes.",
+        "<strong>⛴️ Mini-croisière en ferry local</strong>: Prenez un ferry public pour une courte traversée vers une île voisine (ex: Kvaløya) et profitez des vues sur les fjords.",
+        "<strong>🍽️ Dîner d\"adieu</strong>: Savourez un dernier dîner mémorable dans un restaurant de fruits de mer de Tromso."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Troll Museum, Tromso",
+          "categorie": "Musée",
+          "coords": { "lat": 69.6490, "lng": 18.9580 }
+        },
+        {
+          "nom_recherche": "Terminal Ferry Prostneset, Tromso",
+          "categorie": "Port",
+          "coords": { "lat": 69.6495, "lng": 18.9550 }
+        }
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Paysages",
+          "texte": "Le ferry offre une excellente opportunité de prendre des photos des fjords et des montagnes environnantes depuis l\"eau."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🛍️",
+      "titre": "Derniers achats et moments calmes",
+      "legende": "Profitez de cette dernière journée pour faire vos derniers achats de souvenirs ou pour revisiter un lieu que vous avez particulièrement apprécié. Prenez le temps de savourer un dernier café norvégien et de vous imprégner une dernière fois de l\"atmosphère unique de Tromso, avant de préparer votre départ.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🛍️ Derniers achats de souvenirs</strong>: Trouvez les derniers cadeaux ou objets artisanaux à ramener chez vous.",
+        "<strong>☕ Dernier \"Fika\"</strong>: Savourez un dernier café et une pâtisserie dans votre café préféré de Tromso.",
+        "<strong>🚶‍♂️ Balade contemplative</strong>: Une dernière promenade pour admirer les paysages et les lumières de la ville."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Storgata, Tromso",
+          "categorie": "Rue commerçante",
+          "coords": { "lat": 69.6490, "lng": 18.9560 }
+        }
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "📦",
+          "titre": "Bagages",
+          "texte": "Pensez à laisser de la place dans vos bagages pour les souvenirs, notamment les pulls en laine ou les produits locaux."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🛫",
+      "titre": "Départ de Tromso",
+      "legende": "Après un petit-déjeuner tranquille, il est temps de dire au revoir à la magnifique ville de Tromso. Transfert vers l\"aéroport pour votre vol retour, la tête remplie de souvenirs inoubliables des aurores boréales et des paysages arctiques.",
+      "lieu": "Tromso",
+      "activites": [
+        "<strong>🍳 Petit-déjeuner à l\"hôtel</strong>: Profitez d\"un dernier repas norvégien.",
+        "<strong>🧳 Check-out et transfert</strong>: Départ de l\"hôtel et transfert vers l\"aéroport de Tromso (TOS).",
+        "<strong>🛫 Vol retour vers Paris</strong>: Embarquement pour votre vol de retour, emportant avec vous la magie de l\"Arctique."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Timing",
+          "texte": "Prévoyez suffisamment de temps pour le transfert et les formalités à l\"aéroport, surtout en période de forte affluence."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "A partir de 210 €/pers", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 180 €/pers (transferts aéroport, bus locaux, tours)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "Environ 840 €/pers (50-70€/jour, mix restaurants et repas légers)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 1100 €/pers (base 3* pour 13 nuits, sur 2 pers)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 650 €/pers (aurores, rennes, baleines, traîneau, musées)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Janvier à Mars", "symbole": "🌌" },
+    { "titre": "Novembre à Février", "symbole": "❄️" }
+  ],
+  "infos_pratiques": [
+    { "titre": "En janvier, les températures à Tromso varient entre -10°C et 0°C. Prévoir des vêtements très chauds, multicouches, imperméables et coupe-vent (bonnet, gants, écharpe, bottes fourrées).", "symbole": "🍁" },
+    { "titre": "La monnaie est la Couronne Norvégienne (NOK). Les cartes de crédit sont largement acceptées partout. Prévoir un peu de liquide pour les petits marchés ou pourboires.", "symbole": "💳" },
+    { "titre": "Le permis français est suffisant. La conduite se fait à droite. Les routes peuvent être enneigées ou verglacées, des pneus hiver sont obligatoires. Les transports en commun sont efficaces à Tromso.", "symbole": "🚗" },
+    { "titre": "Le norvégien est la langue officielle, mais l\"anglais est couramment parlé. Une carte SIM locale ou une eSIM est recommandée pour les données mobiles. Le Wi-Fi est disponible dans la plupart des hébergements et lieux publics.", "symbole": "📶" }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "💡",
+      "titre": "Le saviez-vous ?",
+      "texte": "Tromso est surnommée le \"Paris du Nord\" non pas pour son architecture, mais pour son élégance et sa vie culturelle animée, même au-delà du cercle polaire. Au 19ème siècle, elle était un centre commercial florissant et un point de départ pour les expéditions arctiques."
+    },
+    {
+      "symbole": "🙃",
+      "titre": "Insolite",
+      "texte": "Pendant la période de la Nuit Polaire (de fin novembre à mi-janvier), le soleil ne se lève pas du tout à Tromso. La ville vit dans une lumière crépusculaire bleutée, offrant une ambiance mystique et augmentant les chances d\"observer les aurores boréales même en journée claire."
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍴",
+      "titre": "Fiskesuppe",
+      "description": "Une délicieuse soupe de poisson crémeuse, souvent préparée avec du saumon, de la morue et des légumes, parfaite pour se réchauffer dans le froid arctique."
+    },
+    {
+      "symbole": "🍖",
+      "titre": "Kjøttkaker",
+      "description": "Les boulettes de viande norvégiennes, servies avec une sauce brune, des pommes de terre et des petits pois, un plat réconfortant et traditionnel."
+    },
+    {
+      "symbole": "🍓",
+      "titre": "Moltebær (Cloudberries)",
+      "description": "Ces baies arctiques dorées, rares et précieuses, sont souvent servies avec de la crème fouettée ou en confiture, offrant une saveur unique et légèrement acidulée."
+    }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/CDG-TOS/2026-01-09/2026-01-22", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Visit Norway", "url": "https://www.visitnorway.fr/", "symbole": "📘" },
+    { "legende": "Transports locaux Tromso", "titre": "Troms Fylkestrafikk", "url": "https://www.tromskortet.no/reiseplanlegger/category1000.html", "symbole": "🚌" },
+    { "legende": "Météo Tromso", "titre": "Yr.no (Météo Norvégienne)", "url": "https://www.yr.no/en/forecast/daily-table/1-305409/Norway/Troms%20og%20Finnmark/Troms%C3%B8/Troms%C3%B8", "symbole": "🌤️" }
+  ]
+}
